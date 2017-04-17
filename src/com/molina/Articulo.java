@@ -1,0 +1,41 @@
+package com.molina;
+
+/**
+ * Created by Fran Molina on 17/04/2017.
+ */
+public class Articulo {
+
+    //Atributos
+
+    private String nombre;
+    private double precio;
+
+    //Constructores
+
+    public Articulo(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    //Accesores
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre.trim().replaceAll("\\s+"," ");
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        if (precio < 0){
+            this.precio = 1;
+        }else {
+            this.precio = precio;
+        }
+    }
+}

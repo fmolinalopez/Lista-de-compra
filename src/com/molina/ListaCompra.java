@@ -1,5 +1,6 @@
 package com.molina;
 
+import java.io.DataOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,8 +17,10 @@ public abstract class ListaCompra {
         double precio;
         Articulo articulo;
 
-        System.out.println("Introduce el producto:");
-        producto = input.nextLine();
+        do {
+            System.out.println("Introduce el producto:");
+            producto = input.nextLine().trim().replaceAll("\\s+"," ");
+        }while (producto.length() == 0);
         System.out.println("Introduce el precio del producto:");
         precio = input.nextDouble();
 

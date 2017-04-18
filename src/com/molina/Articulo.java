@@ -13,8 +13,8 @@ public class Articulo {
     //Constructores
 
     public Articulo(String nombre, double precio) {
-        this.nombre = nombre;
-        this.precio = precio;
+        this.setNombre(nombre);
+        this.setPrecio(precio);
     }
 
     //Accesores
@@ -24,7 +24,7 @@ public class Articulo {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre.trim().replaceAll("\\s+"," ");
+        this.nombre = nombre;
     }
 
     public double getPrecio() {
